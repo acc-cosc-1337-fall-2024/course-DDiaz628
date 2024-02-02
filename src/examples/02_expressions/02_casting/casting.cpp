@@ -15,11 +15,13 @@ double convert_to_double(int years, double rate)
 /*
 Function convert_double_to_int with a double parameter returns the 
 double parameter
-
 @param double num
 @return the num parameter
 */
-
+int convert_double_to_int(double num)
+{
+    return num;
+}
 /*
 Function static_cast_double_int with a double parameter that does
 a static_cast conversion to int
