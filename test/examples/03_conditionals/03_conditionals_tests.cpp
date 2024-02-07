@@ -24,3 +24,22 @@ TEST_CASE("Verify NOT operator") {
 	REQUIRE(get_not_result(true) == false);
 	REQUIRE(get_not_result(false) == true);
 }
+
+TEST_CASE("Verify boolean logic order of precedence") {
+	REQUIRE((!true && true || true) == true);
+	REQUIRE((true || true && !true) == true);
+}
+
+TEST_CASE("Verify is_even function") {
+	REQUIRE((is_even(2)) == true);
+	REQUIRE((is_even(3)) == false);
+	REQUIRE((is_even(999)) == false);
+	REQUIRE((is_even(1002)) == true);
+}
+
+TEST_CASE("Verify is_odd function") {
+	REQUIRE((is_odd(2)) == false);
+	REQUIRE((is_odd(3)) == true);
+	REQUIRE((is_odd(999)) == true);
+	REQUIRE((is_odd(1002)) == false);
+}
