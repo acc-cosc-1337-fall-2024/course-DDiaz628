@@ -28,6 +28,15 @@ int main()
 
 	cout<<odd<<"\n";
 
+	auto result = false;
+	auto ch = 'a';
+
+	cout<<"Enter a letter: ";
+	cin>>ch;
+
+	result = is_vowel(ch);
+
+	cout<<result;
 
 	return 0;
 }
