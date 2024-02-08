@@ -6,6 +6,7 @@ using std::cin;
 
 int main() 
 {
+	/*
 	//create a bool variable named even
 	//create an int variable named value
 	auto even = false;
@@ -27,6 +28,7 @@ int main()
 	auto odd = is_odd(value);
 
 	cout<<odd<<"\n";
+	*/
 
 	auto result = false;
 	auto ch = 'a';
@@ -36,7 +38,12 @@ int main()
 
 	result = is_vowel(ch);
 
-	cout<<result;
+	if(result == true)
+	{
+		cout<<" is a vowel";
+	}
+
+	cout<<result<<"\n";
 
 	return 0;
 }
