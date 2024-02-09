@@ -38,9 +38,13 @@ int main()
 
 	result = is_vowel(ch);
 
-	if(result == true)
+	if(result)
 	{
-		cout<<" is a vowel";
+		cout<<ch<<" is a vowel"<<"\n";
+	}
+	else
+	{
+		cout<<ch<<" is not a vowel"<<"\n";
 	}
 
 	cout<<result<<"\n";
