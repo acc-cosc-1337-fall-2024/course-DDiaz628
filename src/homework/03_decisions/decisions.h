@@ -7,7 +7,6 @@
 //Write a function(s) prototype  here
 int get_letter_grade_using_if(int num);
 int get_letter_grade_using_switch(int num);
-//int condition_choice(int opt);
 
 
 

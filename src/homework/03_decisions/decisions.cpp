@@ -5,7 +5,6 @@ using std::string; using std::cout; using std::cin;
 
 //Write code for function(s) code here
 
-//All comments from this point are other ways I could have done program
 int get_letter_grade_using_if(int num)
 {
    char letter_grade = ' ';
@@ -66,41 +65,3 @@ int get_letter_grade_using_switch(int num)
 
     return letter_grade_switch;
 }
-
-/*
-int condition_choice(int opt)
-{
-    int grade = 0;
-    char letter = ' ';
-
-    switch(opt)
-    {
-        case 1:
-            cout<<"Enter grade: ";
-		    cin>>grade;
-
-		    letter = get_letter_grade_using_if(grade);
-
-		    cout<<letter<<"\n";
-
-            break;
-        case 2:
-            cout<<"Enter grade: ";
-		    cin>>grade;
-
-		    letter = get_letter_grade_using_switch(grade);
-
-		    cout<<letter<<"\n";
-
-            break;
-        case 3:
-            cout<<"Exit\n ";
-            break;
-        default:
-            cout<<"Invalid Option\n";
-            break;
-    }
-
-    return letter;
-}
-*/
