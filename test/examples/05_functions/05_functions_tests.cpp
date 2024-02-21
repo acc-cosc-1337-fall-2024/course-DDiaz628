@@ -12,3 +12,9 @@ TEST_CASE("val_ref") {//copy parameter
 	
 	REQUIRE(num == 5);
 }
+
+TEST_CASE("test reference_params") {
+	int num = 5; //local reverence variable
+	reference_params(num);//pass the address where num is stored
+	REQUIRE(num == 10);
+}
