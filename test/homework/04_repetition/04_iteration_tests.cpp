@@ -12,7 +12,7 @@ TEST_CASE("Test factorial while loop") {
 	REQUIRE(factorial(6) == 720);
 }
 
-TEST_CASE("Test gcd") {
+TEST_CASE("Test gcd while loop") {
 	REQUIRE(gcd(5, 15) == 5);
 	REQUIRE(gcd(21, 28) == 7);
 	REQUIRE(gcd(25, 100) == 25);

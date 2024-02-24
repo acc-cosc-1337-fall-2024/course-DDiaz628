@@ -17,7 +17,6 @@ int factorial(int num)
 
 int gcd(int num1, int num2)
 {
-    //int result = 0;
 
     while(num1 != num2)
     {
