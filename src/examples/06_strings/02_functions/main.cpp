@@ -10,9 +10,11 @@ int main()
 
     //display_str_while_ref(lang);
 
-    display_str_for(lang);
+    //display_str_for(lang);
 
-    display_for_ref(lang);
+    //display_for_ref(lang);
+
+    display_for_range(lang);
 
     return 0;
 }
