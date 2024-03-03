@@ -63,13 +63,9 @@ string get_dna_complement(string dna)
             rev_dna[num] = 'C';
         }
 
-        else //if(rev_dna[num] != 'A' && rev_dna[num] != 'T' && rev_dna[num] != 'C' && rev_dna[num != 'G'])
+        else
         {
-            rev_dna = "";
-            //num = -2;
-            //cout<<"\n Invalid DNA string.\n\n Returning to Main Menu\n\n";
             return "0";
-
         }
 
         num++;

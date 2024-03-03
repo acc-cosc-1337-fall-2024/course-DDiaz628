@@ -49,7 +49,7 @@ int main()
 			}
 		}
 
-		else if(option !=1 && option !=2 && option != 3 && option != 0)
+		else if(option !=1 && option !=2 && option != 3)
 		{
 			cout<<"\nInvalid option\n\n";
 		}
@@ -62,7 +62,7 @@ int main()
 			
 			if (exit == 1)
 			{
-				cout<<"\nGoodbye\n";
+				cout<<"\nHave a good day!\n";
 				break;
 			}
 
