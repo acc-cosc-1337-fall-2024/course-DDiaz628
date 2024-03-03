@@ -12,12 +12,12 @@ double get_gc_content(const string& dna)
     
     for(int i = 0; i < dna.size(); i++)
     {
-        if(dna[i] == 'G' || dna[i] == 'C')
+        if(dna[i] == 'G' || dna[i] == 'g' || dna[i] == 'C' || dna[i] == 'c')
         {
             sum += 1;
         }
 
-        else if(dna[i] == 'A' || dna[i] == 'T')
+        else if(dna[i] == 'A' || dna[i] == 'a' || dna[i] == 'T' || dna[i] == 't')
         {
             sum += 0;
         }
@@ -43,22 +43,22 @@ string get_dna_complement(string dna)
 
     while(num < rev_dna.size())
     {
-        if (rev_dna[num] == 'A')
+        if (rev_dna[num] == 'A' || rev_dna[num] == 'a')
         {
             rev_dna[num] = 'T';
         }
 
-        else if (rev_dna[num] == 'T')
+        else if (rev_dna[num] == 'T' || rev_dna[num] == 't')
         {
             rev_dna[num] = 'A';
         }
 
-        else if (rev_dna[num] == 'C')
+        else if (rev_dna[num] == 'C' || rev_dna[num] == 'c')
         {
             rev_dna[num] = 'G';
         }
 
-        else if (rev_dna[num] == 'G')
+        else if (rev_dna[num] == 'G' || rev_dna[num] == 'g')
         {
             rev_dna[num] = 'C';
         }

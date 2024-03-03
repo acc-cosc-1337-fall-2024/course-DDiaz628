@@ -21,15 +21,14 @@ int main()
 			cout<<"\nEnter DNA string: \n";
 			cin>>dna;
 			result_gc = get_gc_content(dna);
-			if(result_gc == -1)
+			while(result_gc == -1)
 			{
-				cout<<"\nInvalid DNA string.\n\nReturning to Main Menu\n\n";
+				cout<<"\nInvalid DNA string.\n\nPlease try again (Use only the letters A, C, T, or G)\n\n";
+				cin>>dna;
+				result_gc = get_gc_content(dna);
 			}
 
-			else
-			{
-				cout<<"\nGC content of "<<dna<<" is: "<<result_gc<<"\n\nReturning to Main Menu\n\n";
-			}
+			cout<<"\nGC content of "<<dna<<" is: "<<result_gc<<"\n\nReturning to Main Menu\n\n";
 		}
 
 		else if(option == 2)
@@ -38,15 +37,14 @@ int main()
 			cin>>dna;
 			result_dna_complement = get_dna_complement(dna);
 
-			if(result_dna_complement == "0")
+			while(result_dna_complement == "0")
 			{
-				cout<<"\nInvalid DNA string.\n\nReturning to Main Menu\n\n";
+				cout<<"\nInvalid DNA string.\n\nPlease try again (Use only the letters A, C, T, or G)\n\n";
+				cin>>dna;
+				result_dna_complement = get_dna_complement(dna);
 			}
 
-			else
-			{
-				cout<<"\nDNA complement for "<<dna<<" is "<<result_dna_complement<<"\n\nReturning to Main Menu\n\n";
-			}
+			cout<<"\nDNA complement for "<<dna<<" is "<<result_dna_complement<<"\n\nReturning to Main Menu\n\n";
 		}
 
 		else if(option !=1 && option !=2 && option != 3)
@@ -69,7 +67,7 @@ int main()
 			else if(exit == 2)
 			{
 				option = 0;
-				cout<<"\nReturn to Main Menu\n\n";
+				cout<<"\nReturning to Main Menu\n\n";
 				exit = 0;
 
 			}
