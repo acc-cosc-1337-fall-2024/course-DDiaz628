@@ -6,8 +6,8 @@ using std::vector; using std:: cout; using std::string;
 
 int main()
 {
-    vector<int> nums{7, 2, 9};
-    cout<<nums[1]<<"\n";
+    vector<double> nums{7.5, 2.2, 9.5};
+    cout<<nums[1]<<"\n\n";
 
     /*for(auto i = 0; i < nums.size(); i++)
     {
@@ -31,7 +31,7 @@ int main()
     cout<<num<<"\n";
    }
 
-   cout<<"\n\n";
+   cout<<"\n";
 
    vector<string> str{9, "X"};
    for(auto i = 0; i < str.size(); i++)
