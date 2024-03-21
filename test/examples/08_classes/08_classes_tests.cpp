@@ -11,3 +11,27 @@ TEST_CASE("Test bank account get balance")
 	BankAccount account;
 	REQUIRE(account.get_balance() == 0);
 }
+
+TEST_CASE("Test BankAccount constructor w one param")
+{
+	BankAccount account(500);
+	REQUIRE(account.get_balance() == 500);
+}
+
+TEST_CASE("Test deposit w default construct")
+{
+	BankAccount account;
+	REQUIRE(account.get_balance() == 0);
+
+	account.deposit(100);
+	REQUIRE(account.get_balance() == 100);
+}
+
+TEST_CASE("Test BankAccount constructor")
+{
+	BankAccount account(500);
+	REQUIRE(account.get_balance() == 500);
+
+	account.deposit(100);
+	REQUIRE(account.get_balance() == 600);
+}
