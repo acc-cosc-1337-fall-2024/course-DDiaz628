@@ -35,3 +35,33 @@ TEST_CASE("Test BankAccount constructor")
 	account.deposit(100);
 	REQUIRE(account.get_balance() == 600);
 }
+
+TEST_CASE("Test withdraw w default constructor")
+{
+	BankAccount account;
+	REQUIRE(account.get_balance() == 0);
+
+	account.deposit(100);
+	REQUIRE(account.get_balance() == 100);
+
+	account.withdraw(20);
+	REQUIRE(account.get_balance() == 80);
+}
+
+TEST_CASE("Test withdraw w balance 500")
+{
+	BankAccount account(500);
+	REQUIRE(account.get_balance() == 500);
+
+	account.withdraw(50);
+	REQUIRE(account.get_balance() == 450);
+}
+
+TEST_CASE("Test withdraw w funds > balance")
+{
+	BankAccount account(100);
+	REQUIRE(account.get_balance() == 100);
+
+	account.withdraw(101);
+	REQUIRE(account.get_balance() == 100);
+}

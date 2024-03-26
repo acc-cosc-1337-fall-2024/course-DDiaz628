@@ -12,6 +12,14 @@ void BankAccount :: deposit(int amount)
     }
 }
 
+void BankAccount::withdraw(int amount)
+{
+     if(amount > 0 && amount <= balance)
+    {
+        balance -= amount;
+    }
+}
+
 //End of code block belonging to BankAccount
 
 //Frewe function - not part of class
@@ -19,6 +27,7 @@ void display_menu()
 {
     cout<<"\n1- Display balance\n";
     cout<<"\n2- Deposit\n";
+    cout<<"\n3- Withdraw\n";
     cout<<"\n4- Exit\n";
 }
 
@@ -44,13 +53,19 @@ void handle_menu(int choice, BankAccount& account)
     switch (choice)
     {
         case 1:
-            cout<<"\n"<<account.get_balance()<<"\n";
+            cout<<"\nBalance: "<<account.get_balance()<<"\n";
             break;
         
         case 2:
             cout<<"\nEnter Deposit amount:\n";
             cin>>amount;
             account.deposit(amount);
+            break;
+
+        case 3:
+            cout<<"\nEnter Withdraw amount:\n";
+            cin>>amount;
+            account.withdraw(amount);
             break;
 
         case 4:

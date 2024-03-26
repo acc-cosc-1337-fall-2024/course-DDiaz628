@@ -10,6 +10,7 @@ public: //other regions of code, test, other function, other class can see
     
     int get_balance(){return balance;}
     void deposit(int amount);
+    void withdraw(int amount);
 
 private://only BankAccount can read/write to balance directly
     int balance{0}; //Initialize balance to 0 on class creation    
