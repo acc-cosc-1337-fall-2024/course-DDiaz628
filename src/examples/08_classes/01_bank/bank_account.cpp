@@ -23,7 +23,7 @@ void BankAccount::withdraw(int amount)
 //End of code block belonging to BankAccount
 
 //Frewe function - not part of class
-void display_menu()
+/*void display_menu()
 {
     cout<<"\n1- Display balance\n";
     cout<<"\n2- Deposit\n";
@@ -76,4 +76,5 @@ void handle_menu(int choice, BankAccount& account)
             break;
     }
 }
+*/
 

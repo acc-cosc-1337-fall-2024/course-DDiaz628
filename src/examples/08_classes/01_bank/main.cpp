@@ -1,3 +1,4 @@
+#include "atm.h"
 #include "bank_account.h"
 #include <iostream>
 
@@ -11,9 +12,11 @@ int main()
 
 	BankAccount account(500); //create variable/object
 
-	run_menu(account);
+	ATM atm(account);
 
-	//cout<<"Balance: "<< account.get_balance()<<"\n";
+	run_menu(atm);
+
+	cout<<"Balance: "<< account.get_balance()<<"\n";
 
 	return 0;
 }

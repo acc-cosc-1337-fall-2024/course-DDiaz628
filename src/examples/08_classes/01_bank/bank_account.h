@@ -1,6 +1,9 @@
 //bank_account.h
 #include <iostream>
 
+#ifndef BANK_ACCOUNT_H
+#define BANK_ACCOUNT_H
+
 class BankAccount
 {
 
@@ -15,6 +18,8 @@ public: //other regions of code, test, other function, other class can see
 private://only BankAccount can read/write to balance directly
     int balance{0}; //Initialize balance to 0 on class creation    
 };
+
+#endif
 
 void display_menu();
 void run_menu(BankAccount& account);
