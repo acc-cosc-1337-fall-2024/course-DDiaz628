@@ -50,7 +50,6 @@ void run_menu(ATM& atm)
 
 void handle_menu(int choice, ATM& atm)
 {
-    auto amount = 0;
 
     switch (choice)
     {

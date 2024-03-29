@@ -9,7 +9,7 @@ class BankAccount
 {
 
 public: //other regions of code, test, other function, other class can see
-    BankAccount(){get_balance_from_db();}//Default Constructor
+    BankAccount(){}//Default Constructor
     BankAccount(int b) : balance(b){/*empty code block*/}
     
     int get_balance(){return balance;}
