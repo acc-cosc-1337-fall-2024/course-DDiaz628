@@ -8,7 +8,7 @@ int main()
 
 	do
 	{
-		cout<<"Enter player 1: ";
+		cout<<"Enter X or O: ";
 		cin>>p1;
 
 		game.start_game(p1);
@@ -17,7 +17,7 @@ int main()
 
 		while(!game.game_over())
 		{
-			cout<<"\nEnter a position: ";
+			cout<<"\nEnter a position from 1 - 9: ";
 			cin>>position;
 			game.mark_board(position);
 			game.display_board();
@@ -25,7 +25,7 @@ int main()
 
 		}
 
-		cout<<"\nPlay again?\nEnter y or Y: ";
+		cout<<"\nPlay again?\nEnter y or Y for a new game: ";
 		cin>>option;
 	
 	} while (option == 'y' || option == 'Y');
