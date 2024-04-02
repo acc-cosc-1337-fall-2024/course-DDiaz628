@@ -5,19 +5,35 @@
 #include "bank_DB.h"
 #include "checking_account.h"
 #include "savings_account.h"
+#include <vector>
 
-using std::cout;
+using std::cout; using std::vector;
 
 
 int main()
 {
+	vector<BankAccount> accounts;
+	
 	srand(time(NULL));
-
-	BankAccount account;
-	cout<<account.get_balance()<<"\n";
-
+	CheckingAccount checking;
 	SavingsAccount savings;
-	cout<<savings.get_balance()<<"\n";
+	
+	accounts.push_back(checking);
+	accounts.push_back(savings);
+
+	cout<<accounts[0].get_balance()<<"\n";//checkings
+	cout<<accounts[1].get_balance()<<"\n";//savings
+	
+	
+	
+	
+	//BankAccount account;
+	
+	
+	//cout<<account.get_balance()<<"\n";
+
+	//SavingsAccount savings;
+	//cout<<savings.get_balance()<<"\n";
 
 
 	//assume other class retrieved balance from database
