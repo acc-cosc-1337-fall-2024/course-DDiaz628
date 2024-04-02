@@ -7,8 +7,8 @@
 class CheckingAccount : public BankAccount
 {
     public:
-        CheckingAccount(){}
-        CheckingAccount(int b) : BankAccount(b){}
+        CheckingAccount(){std::cout<<"Default constructor fired: \n";}
+        CheckingAccount(int b) : BankAccount(b){std::cout<<"Constructor with balance param fired";}
     private:
 
 };

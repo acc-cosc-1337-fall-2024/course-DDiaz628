@@ -9,8 +9,8 @@ class BankAccount
 {
 
 public: //other regions of code, test, other function, other class can see
-    BankAccount(){}//Default Constructor
-    BankAccount(int b) : balance(b){/*empty code block*/}
+    BankAccount(){std::cout<<"Default constructor fired: \n";}//Default Constructor
+    BankAccount(int b) : balance(b){std::cout<<"Constructor with balance param fired";}
     
     int get_balance(){return balance;}
     void deposit(int amount);

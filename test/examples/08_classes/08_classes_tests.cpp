@@ -92,11 +92,11 @@ TEST_CASE("Test deposit w default construct(checking acc)")
 TEST_CASE("Test savings account")
 {
 	SavingsAccount account;
-	REQUIRE(account.get_balance() == 0);
+	REQUIRE(account.get_balance() == 5);
 }
 
 TEST_CASE("Test savings account w param")
 {
 	SavingsAccount account(500);
-	REQUIRE(account.get_balance() == 500);
+	REQUIRE(account.get_balance() == 505);
 }

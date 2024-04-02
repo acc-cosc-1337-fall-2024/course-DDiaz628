@@ -9,6 +9,7 @@ class SavingsAccount : public BankAccount
 public:
     SavingsAccount(){}
     SavingsAccount (int b) : BankAccount(b){}
+    int get_balance(){return BankAccount::get_balance() + 5;}
 };
 
 
