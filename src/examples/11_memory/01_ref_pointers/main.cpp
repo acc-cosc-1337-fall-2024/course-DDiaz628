@@ -5,7 +5,21 @@ using std::cout;
 
 int main() 
 {
-	int num1 = 5, num2 = 10;
+	//create memory
+	int*num = new int (5);//create memory allocation on heap
+
+	//use memory
+	cout<<*num<<"\n";
+
+	//delete/free memory
+	delete num;
+	
+	
+	
+	
+	
+	
+	/*int num1 = 5, num2 = 10;
 	int* num_ptr; //don't have to point at anything
 	cout<<"Address of num1: "<<&num1<<"\n";
 
@@ -15,6 +29,7 @@ int main()
 
 	num_ptr = &num2;
 	cout<<*num_ptr<<"\n";
+	*/
 
 	/*int num1 = 5;
 	int& num1_ref = num1;
