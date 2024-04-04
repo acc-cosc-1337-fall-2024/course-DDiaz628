@@ -9,7 +9,7 @@ class SavingsAccount : public BankAccount
 public:
     SavingsAccount(){}
     SavingsAccount (int b) : BankAccount(b){}
-    int get_balance(){return BankAccount::get_balance() + 5;}
+    int get_balance(){std::cout<<"Savings get balance: ";return BankAccount::get_balance() + 5;}
 };
 
 
