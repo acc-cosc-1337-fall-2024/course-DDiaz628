@@ -12,12 +12,29 @@ using std::cout; using std::vector;
 
 int main()
 {
-	//inheritence + pointer + virtual function = polymrphism- BankAccount will behave as SavingsAccount at runtime
+	vector<BankAccount*> accounts;
+	
+	srand(time(NULL));
+	CheckingAccount checking;
+	SavingsAccount savings;
+	//savings.get_balance();
+	//BankAccount* ptr = &savings;
+	//ptr->get_balance();
+	
+	accounts.push_back(&checking);
+	accounts.push_back(&savings);
+
+	cout<<accounts[0]->get_balance()<<"\n";//checkings
+	cout<<accounts[1]->get_balance()<<"\n";//savings
+	//cout<<savings.get_balance()<<"\n";
+
+	/*inheritence + pointer + virtual function = polymrphism- BankAccount will behave as SavingsAccount at runtime
 	BankAccount* account_ptr;
 	SavingsAccount savings;
-	account_ptr = &savings;
+	account_ptr = &savings;.
 
 	cout<<account_ptr->get_balance()<<"\n";
+	*/
 
 	/*
 	vector<BankAccount> accounts;
