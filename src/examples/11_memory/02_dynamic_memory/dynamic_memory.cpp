@@ -19,3 +19,11 @@ void use_shared_ptr()
     cout<<*num_sp2<<"\n";
     cout<<num_sp2.use_count()<<"\n";
 }
+
+void use_weak_ptr()
+{
+    shared_ptr<int> num_sp1 = make_unique<int>(10);
+    weak_ptr<int> num_wp = num_sp1;
+    cout<<*num_wp.lock()<<"\n";
+    
+}
