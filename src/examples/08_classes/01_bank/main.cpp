@@ -6,23 +6,22 @@
 #include "checking_account.h"
 #include "savings_account.h"
 #include <vector>
+#include <memory>
 
 using std::cout; using std::vector;
-
+using std::unique_ptr; using std::make_unique;
 
 int main()
 {
-	vector<BankAccount*> accounts;
+	vector<unique_ptr<BankAccount>> accounts;
 	
-	srand(time(NULL));
-	CheckingAccount checking;
-	SavingsAccount savings;
+	//srand(time(NULL));
 	//savings.get_balance();
 	//BankAccount* ptr = &savings;
 	//ptr->get_balance();
 	
-	accounts.push_back(&checking);
-	accounts.push_back(&savings);
+	accounts.push_back(make_unique<CheckingAccount>());
+	accounts.push_back(make_unique<SavingsAccount>());
 
 	cout<<accounts[0]->get_balance()<<"\n";//checkings
 	cout<<accounts[1]->get_balance()<<"\n";//savings

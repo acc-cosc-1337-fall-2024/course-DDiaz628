@@ -13,11 +13,7 @@ int main()
 
 	//delete/free memory
 	delete num;
-	
-	
-	
-	
-	
+
 	
 	/*int num1 = 5, num2 = 10;
 	int* num_ptr; //don't have to point at anything
