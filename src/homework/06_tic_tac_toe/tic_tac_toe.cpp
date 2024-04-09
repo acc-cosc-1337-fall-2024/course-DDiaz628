@@ -47,7 +47,16 @@ string TicTacToe::get_winner()
 {
     string win;
     win = winner();
-    cout<<"\n"<<win<<" Wins!\n";
+    if(win == "X" || win == "O")
+    {
+       cout<<"\n"<<win<<" Wins!\n"; 
+    }
+
+    else
+    {
+        cout<<"\nIt's a tie!\n";
+    }
+    
     return win;
 }
 
