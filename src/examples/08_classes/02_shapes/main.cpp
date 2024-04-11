@@ -13,6 +13,18 @@ iterate with auto
 
 int main() 
 {
+	std::vector<std::unique_ptr<Shape>> shapes;
+
+	shapes.push_back(std::make_unique<Circle>());
+	shapes.push_back(std::make_unique<Line>());
+
+	for(auto& shape: shapes)
+	{
+		shape->draw();
+	}
+
+
+	/*
 	Shape* s;//pointer to a Shape type that includes Circle and Line
 	//Shape s1;
 	//Shape s;
@@ -28,6 +40,6 @@ int main()
 	s->draw();
 
 	//l.draw()
-
+	*/
 	return 0;
 }
