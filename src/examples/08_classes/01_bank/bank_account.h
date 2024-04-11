@@ -10,7 +10,7 @@ class BankAccount
 
 public: //other regions of code, test, other function, other class can see
     BankAccount(){std::cout<<"BankAccount Default constructor fired: \n";}//Default Constructor
-    BankAccount(int b) : balance(b){std::cout<<"Constructor with balance param fired";}
+    BankAccount(int b) : balance(b){std::cout<<"Constructor with balance param fired\n";}
     
     virtual int get_balance(){std::cout<<"Bank get balance: "; return balance;}
     void deposit(int amount);

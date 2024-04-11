@@ -5,6 +5,7 @@
 #include "bank_DB.h"
 #include "checking_account.h"
 #include "savings_account.h"
+#include "customer.h"
 #include <vector>
 #include <memory>
 
@@ -12,8 +13,22 @@ using std::cout; using std::vector;
 using std::unique_ptr; using std::make_unique;
 
 int main()
-{
-	vector<unique_ptr<BankAccount>> accounts;
+{	
+	srand(time(NULL));
+
+	vector<Customer> customers;
+	//vector<unique_ptr<Customer>> customers;
+	customers.push_back(Customer(1, "John Doe"));
+	customers.push_back(Customer(2, "Mary Doe"));
+	customers.push_back(Customer(3, "John Hancock"));
+	customers.push_back(Customer(4, "Mary Doe"));
+	customers.push_back(Customer(5, "Bjarne Stroustrup"));
+
+	ATM atm(customers);
+
+	run_menu(atm);
+
+	/*vector<unique_ptr<BankAccount>> accounts;
 	
 	//srand(time(NULL));
 	//savings.get_balance();
@@ -25,6 +40,8 @@ int main()
 
 	cout<<accounts[0]->get_balance()<<"\n";//checkings
 	cout<<accounts[1]->get_balance()<<"\n";//savings
+	*/
+
 	//cout<<savings.get_balance()<<"\n";
 
 	/*inheritence + pointer + virtual function = polymrphism- BankAccount will behave as SavingsAccount at runtime
