@@ -13,6 +13,21 @@ iterate with auto
 
 int main() 
 {
+	Shape* s;//pointer to a Shape type that includes Circle and Line
+	//Shape s1;
+	//Shape s;
+	//s.draw();
+
+	Circle c;
+	s = &c;
+	s ->draw();
+	//c.draw();
+
+	Line l;
+	s = &l;
+	s->draw();
+
+	//l.draw()
 
 	return 0;
 }
