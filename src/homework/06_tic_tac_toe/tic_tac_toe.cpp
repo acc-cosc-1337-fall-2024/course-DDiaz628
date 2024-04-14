@@ -47,12 +47,17 @@ string TicTacToe::get_winner()
 {
     string win;
     win = winner();
-    if(win == "X" || win == "O")
+    if(win == "X")
     {
        cout<<"\n"<<win<<" Wins!\n"; 
     }
 
-    else
+    else if (win == "O")
+    {
+       cout<<"\n"<<win<<" Wins!\n"; 
+    }
+
+    else if (win == "T")
     {
         cout<<"\nIt's a tie!\n";
     }
@@ -257,7 +262,7 @@ string TicTacToe::winner()
 
     else if(check_board_full() == true)
     {
-        return "C";
+        return "T";
     }
 
 }

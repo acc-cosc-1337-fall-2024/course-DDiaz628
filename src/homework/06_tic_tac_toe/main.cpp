@@ -1,8 +1,10 @@
 #include "tic_tac_toe.h"
+#include "tic_tac_toe_manager.h"
 
 int main() 
 {
 	TicTacToe game;
+	TicTacToeManager manage;
 	string p1;
 	char option;
 
@@ -37,11 +39,22 @@ int main()
 			cin>>position;
 			game.mark_board(position);
 			game.display_board();
+			
 
 
 		}
 
-		game.get_winner();
+		//game.get_winner();
+		manage.save_game(game);
+
+		int o;
+		int x;
+		int t;
+		manage.get_winner_total(o, x, t);
+
+		cout<<"\nX Wins: "<<x<<"\n";
+		cout<<"\nO Wins: "<<o<<"\n";
+		cout<<"\nTies: "<<t<<"\n";
 
 		cout<<"\nPlay again?\nEnter Y for a new game or N to exit: ";
 		cin>>option;
