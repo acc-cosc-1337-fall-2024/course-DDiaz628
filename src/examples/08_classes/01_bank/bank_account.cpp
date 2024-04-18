@@ -20,9 +20,16 @@ void BankAccount::withdraw(int amount)
     }
 }
 
+/*
 void BankAccount::get_balance_from_db()
 {
     balance = rand() % 10000 + 1;
+}
+*/
+
+int BankAccount::get_balance()
+{
+    return balance;
 }
 
 //End of code block belonging to BankAccount

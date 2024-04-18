@@ -10,19 +10,19 @@ TEST_CASE("Verify Test Configuration", "verification") {
 
 TEST_CASE("Test bank account get balance")
 {
-	BankAccount account;
+	CheckingAccount account;
 	REQUIRE(account.get_balance() == 0);
 }
 
 TEST_CASE("Test BankAccount constructor w one param")
 {
-	BankAccount account(500);
+	CheckingAccount account(500);
 	REQUIRE(account.get_balance() == 500);
 }
 
 TEST_CASE("Test deposit w default construct")
 {
-	BankAccount account;
+	CheckingAccount account;
 	REQUIRE(account.get_balance() == 0);
 
 	account.deposit(100);
@@ -31,7 +31,7 @@ TEST_CASE("Test deposit w default construct")
 
 TEST_CASE("Test BankAccount constructor")
 {
-	BankAccount account(500);
+	CheckingAccount account(500);
 	REQUIRE(account.get_balance() == 500);
 
 	account.deposit(100);
@@ -40,7 +40,7 @@ TEST_CASE("Test BankAccount constructor")
 
 TEST_CASE("Test withdraw w default constructor")
 {
-	BankAccount account;
+	CheckingAccount account;
 	REQUIRE(account.get_balance() == 0);
 
 	account.deposit(100);
@@ -52,7 +52,7 @@ TEST_CASE("Test withdraw w default constructor")
 
 TEST_CASE("Test withdraw w balance 500")
 {
-	BankAccount account(500);
+	CheckingAccount account(500);
 	REQUIRE(account.get_balance() == 500);
 
 	account.withdraw(50);
@@ -61,7 +61,7 @@ TEST_CASE("Test withdraw w balance 500")
 
 TEST_CASE("Test withdraw w funds > balance")
 {
-	BankAccount account(100);
+	CheckingAccount account(100);
 	REQUIRE(account.get_balance() == 100);
 
 	account.withdraw(101);
