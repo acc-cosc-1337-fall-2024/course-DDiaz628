@@ -2,13 +2,14 @@
 
 //cpp
 //public
-void TicTacToeManager::save_game(TicTacToe b)
+void TicTacToeManager::save_game(unique_ptr<TicTacToe>& b)
 {
-    games.push_back(make_unique<TicTacToe>(b));
-
-    string win = b.get_winner();
+    string win = b->get_winner();
 
     update_winner_count(win);
+    //games.push_back(make_unique<TicTacToe>(b));
+    games.push_back(std::move(b));
+    
     
 }
 
@@ -17,6 +18,14 @@ void TicTacToeManager::get_winner_total(int& o, int& x, int& t)
     o = o_win;
     x = x_win;
     t = ties;
+}
+
+void display_games()
+{
+    for(auto& TicTacToe : games)
+    {
+
+    }
 }
 
 //private

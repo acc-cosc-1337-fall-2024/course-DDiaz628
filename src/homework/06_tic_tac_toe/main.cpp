@@ -1,15 +1,50 @@
 #include "tic_tac_toe.h"
 #include "tic_tac_toe_manager.h"
+#include "tic_tac_toe_3.h"
+#include "tic_tac_toe_4.h"
+
+using std::make_unique;
 
 int main() 
 {
-	TicTacToe game;
+	unique_ptr<TicTacToe> game;
 	TicTacToeManager manage;
 	string p1;
+	int g1;
 	char option;
 
+	//3 or 4
+	/*do
+	{
+		cout<<"Select 1 for 3x3 or 2 for 4x4:\n";
+		cin>>g1;
+		
+		while (g1 != 1 && g1 != 2)
+		{
+			cout<<"Select 1 for 3x3 or 2 for 4x4:\n";
+			cin>>p1;
+		}
+
+
+	}while(g1 != 1 && g1 != 2);
+	*/
+
+
+
+	//player set
 	do
 	{
+		cout<<"Select 1 for 3x3 or 2 for 4x4:\n";
+		cin>>g1;
+		
+		while (g1 != 1 && g1 != 2)
+		{
+			cout<<"Select 1 for 3x3 or 2 for 4x4:\n";
+			cin>>g1;
+		}
+
+		
+
 		cout<<"Enter X or O: ";
 		cin>>p1;
 		
@@ -28,17 +63,26 @@ int main()
 			p1 = "O";
 		}
 		
-
-		game.start_game(p1);
+		if(g1 == 1)
+		{
+			game = make_unique<TicTacToe3>();
+			game->start_game(p1);
+		}
+		else if (g1 == 2)
+		{
+			game = make_unique<TicTacToe4>();
+			game->start_game(p1);
+		}
+		//game->start_game(p1);
 
 		int position;
 
-		while(!game.game_over())
+		while(!game->game_over())
 		{
 			cout<<"\nEnter a position from 1 - 9: ";
 			cin>>position;
-			game.mark_board(position);
-			game.display_board();
+			game->mark_board(position);
+			game->display_board();
 			
 
 

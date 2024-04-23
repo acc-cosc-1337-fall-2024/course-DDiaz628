@@ -102,6 +102,7 @@ bool TicTacToe::check_board_full()
 
 bool TicTacToe::check_column_win()
 {
+    /*
     if (pegs[0] == "X" && pegs[3] == "X" && pegs[6] == "X")
     {
         return true;
@@ -131,15 +132,16 @@ bool TicTacToe::check_column_win()
     {
         return true;
     }
-    
-    else
-    {
-        return false;
-    }
+    */
+    //else
+    //{
+    return false;
+    //}
 }
 
 bool TicTacToe::check_row_win()
 {
+    /*
     if (pegs[0] == "X" && pegs[1] == "X" && pegs[2] == "X")
     {
         return true;
@@ -169,15 +171,16 @@ bool TicTacToe::check_row_win()
     {
         return true;
     }
-    
-    else
-    {
-        return false;
-    }
+    */
+    //else
+    //{
+    return false;
+    //}
 }
 
 bool TicTacToe::check_diagonal_win()
 {
+    /*
     if (pegs[0] == "X" && pegs[4] == "X" && pegs[8] == "X")
     {
         return true;
@@ -197,11 +200,11 @@ bool TicTacToe::check_diagonal_win()
     {
         return true;
     }
-    
-    else
-    {
-        return false;
-    }
+    */
+    //else
+    //{
+    return false;
+    //}
 }
 
 void TicTacToe::set_winner()
