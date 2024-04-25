@@ -20,13 +20,14 @@ void TicTacToeManager::get_winner_total(int& o, int& x, int& t)
     t = ties;
 }
 
-void display_games()
+/*void display_games()
 {
     for(auto& TicTacToe : games)
     {
 
     }
 }
+*/
 
 //private
 void TicTacToeManager::update_winner_count(string winner)
