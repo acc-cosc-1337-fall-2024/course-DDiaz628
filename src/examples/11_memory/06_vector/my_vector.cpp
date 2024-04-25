@@ -12,5 +12,5 @@ Vector :: Vector(int s)
 Vector :: ~Vector()
 {
     delete[] elements;
-    cout<<"Delete memory at: "<<elements<<"\n";
+    cout<<"Deallocate memory at: "<<elements<<"\n";
 }

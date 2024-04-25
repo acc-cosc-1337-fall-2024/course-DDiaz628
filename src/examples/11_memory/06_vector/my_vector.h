@@ -8,6 +8,9 @@ class Vector
 {
 public:
     Vector(int size);
+    int Size(){return size;}
+    int Capacity(){return capacity;}
+
     ~Vector();
 private:
     int size{0};//keep track of current index & num of elements in list
