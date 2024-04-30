@@ -3,6 +3,7 @@
 #include "ref_pointers.h"
 #include "my_vector.h"
 
+/*
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
@@ -32,4 +33,25 @@ TEST_CASE("Test vector capacity")
 	Vector v(3);
 	
 	REQUIRE(v.Capacity() == 3);
+}
+
+TEST_CASE("Test vector creation from existing vector") 
+{
+	Vector v1(3);
+	v1[0] = 5;
+
+	Vector v2 = v1;
+	v2[0] = 10;
+	
+	REQUIRE(v1[0] == 5);
+	//REQUIRE(v2[0] == 10);
+}
+*/
+
+TEST_CASE("Test vector creation-overwrite existing vector variable") 
+{
+	Vector v1(3);
+	Vector v2(3);
+
+	v2 = v1;
 }

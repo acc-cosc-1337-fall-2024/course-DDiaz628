@@ -7,7 +7,9 @@
 class Vector
 {
 public:
-    Vector(int size);
+    Vector(int size);//constructor
+    Vector(const Vector& v1);//copy constructor
+    Vector& operator = (const Vector& v1);
     int Size(){return size;}
     int Capacity(){return capacity;}
     int& operator[](int index){return elements[index];}
