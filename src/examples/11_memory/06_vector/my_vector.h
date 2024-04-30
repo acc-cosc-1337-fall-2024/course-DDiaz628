@@ -10,6 +10,9 @@ public:
     Vector(int size);
     int Size(){return size;}
     int Capacity(){return capacity;}
+    int& operator[](int index){return elements[index];}
+    int& operator[](int index)const{return elements[index];}
+
 
     ~Vector();
 private:
