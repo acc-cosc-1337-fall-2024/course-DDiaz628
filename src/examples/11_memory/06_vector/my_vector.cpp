@@ -67,6 +67,43 @@ Vector& Vector::operator = (Vector&& v2)
     return *this;
 }
 
+void Vector::Reserve(int new_size)
+{
+    if(new_size <= capacity)
+    {
+        return;
+    }
+
+    int* temp = new int[new_size];
+    cout<<"Memory allocated reserve "<<temp<<"\n";
+
+    for(auto i = 0; i < size; i++)
+    {
+        temp[i] = elements[i];
+    }
+
+    cout<<"Memory deallocated Reserve "<<elements<<"\n";
+    delete[] elements;
+
+    elements = temp;
+    capacity = new_size;
+}
+
+void Vector::Push_Back(int value)
+{
+    if(capacity == 0)
+    {
+        Reserve(RESERVE_DEFAULT_SIZE);
+    }
+    else if (capacity == size)
+    {
+        Reserve(capacity * RESERVE_DEFAULT_MULTIPLIER);
+    }
+
+    elements[size] = value;
+    size++;
+}
+
 Vector :: ~Vector()
 {
     cout<<"Deallocate memory at: "<<elements<<"\n";
