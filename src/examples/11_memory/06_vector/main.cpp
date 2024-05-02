@@ -4,6 +4,9 @@ using std::cout;
 //
 int main()
 {
+    int num = 0;
+    int& num_ptr = num;
+
     Vector v(3);
     v[0] = 5;
     cout<<"Size is: "<<v.Size()<<"\n";

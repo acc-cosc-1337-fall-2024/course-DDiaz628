@@ -7,9 +7,11 @@
 class Vector
 {
 public:
-    Vector(int size);//constructor
-    Vector(const Vector& v1);//copy constructor
+    Vector(int size);//constructor - rule 1 of 3 legacy c++
+    Vector(const Vector& v1);//copy constructor - rule 2 of 3 legacy c++
     Vector& operator = (const Vector& v1);
+    Vector(Vector&& v1);
+    Vector& operator = (Vector&& v2);
     int Size(){return size;}
     int Capacity(){return capacity;}
     int& operator[](int index){return elements[index];}
@@ -25,3 +27,5 @@ private:
 
 
 #endif
+
+Vector get_vector();

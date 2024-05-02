@@ -43,8 +43,38 @@ Vector& Vector::operator = (const Vector& v1)
     return *this;
 }
 
+Vector::Vector(Vector&& v1)
+: size{v1.size}, elements{v1.elements}
+{
+    cout<<"Move copy constructor-memory pointer switch "<<elements<<"\n";
+    v1.elements = nullptr;
+    v1.size = 0;
+}
+
+Vector& Vector::operator = (Vector&& v2)
+{
+    cout<<"Memory deallocated move assignment "<<elements<<"\n";
+    delete[] elements;
+
+    elements = v2.elements;
+
+    cout<<"Memory ptr switched Move assignment "<<elements<<"\n";
+    size = v2.size;
+    v2.elements = nullptr;
+    v2.size = 0;
+    cout<<"Move constructor returning...\n";
+
+    return *this;
+}
+
 Vector :: ~Vector()
 {
     cout<<"Deallocate memory at: "<<elements<<"\n";
     delete[] elements;
+}
+
+Vector get_vector()
+{
+    Vector v(3);
+    return v;
 }

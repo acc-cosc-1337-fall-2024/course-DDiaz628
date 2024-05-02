@@ -48,10 +48,28 @@ TEST_CASE("Test vector creation from existing vector")
 }
 */
 
+/*
 TEST_CASE("Test vector creation-overwrite existing vector variable") 
 {
 	Vector v1(3);
 	Vector v2(3);
 
 	v2 = v1;
+}
+*/
+
+TEST_CASE("Test vector with move() function") 
+{
+	Vector v1(3);
+	Vector v2 = std::move(v1);
+
+	
+}
+
+TEST_CASE("Overwrite vector with a function returning vector instance") 
+{
+	Vector v1(3);
+	v1 = get_vector();
+
+	
 }
